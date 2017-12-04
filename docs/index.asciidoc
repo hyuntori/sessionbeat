@@ -1,0 +1,5 @@
+= Sessionbeat Docs
+
+Welcome to the Sessionbeat documentation.
+
+

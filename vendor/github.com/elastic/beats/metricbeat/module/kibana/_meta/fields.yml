@@ -1,0 +1,11 @@
+- key: kibana
+  title: "Kibana"
+  description: >
+    Kibana module
+  short_config: false
+  release: beta
+  fields:
+    - name: kibana
+      type: group
+      description: >
+      fields:

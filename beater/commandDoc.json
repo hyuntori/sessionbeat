@@ -1,0 +1,79 @@
+[
+    {
+        "name": "sum_total",
+        "command": "ss -s | sed -n '1p' | awk '{print $2}'"
+    },
+    {
+        "name": "sum_tcp_total",
+        "command": "ss -s | sed -n '2p' | awk '{print $2}'"
+    },
+    {
+        "name": "sum_tcp_extab",
+        "command": "ss -s | sed -n '2p' | awk '{print $4}' | sed 's/.$//'"
+    },
+    {
+        "name": "sum_tcp_closed",
+        "command": "ss -s | sed -n '2p' | awk '{print $6}' | sed 's/.$//'"
+    },
+    {
+        "name": "sum_tcp_orphaned",
+        "command": "ss -s | sed -n '2p' | awk '{print $8}' | sed 's/.$//'"
+    },
+    {
+        "name": "sum_tcp_synrecv",
+        "command": "ss -s | sed -n '2p' | awk '{print $10}' | sed 's/.$//'"
+    },
+    {
+        "name": "sum_tcp_timewait",
+        "command": "ss -s | sed -n '2p' | awk '{print $12}' | sed 's/....$//'"
+    },
+    {
+        "name": "detail_raw_total",
+        "command": "ss -s | sed -n '6P' | awk '{print $2}'"
+    },
+    {
+        "name": "detail_raw_ip",
+        "command": "ss -s | sed -n '6P' | awk '{print $3}'"
+    },
+    {
+        "name": "detail_raw_ipv6",
+        "command": "ss -s | sed -n '6P' | awk '{print $4}'"
+    },
+    {
+        "name": "detail_udp_total",
+        "command": "ss -s | sed -n '7P' | awk '{print $2}'"
+    },
+    {
+        "name": "detail_udp_ip",
+        "command": "ss -s | sed -n '7P' | awk '{print $3}'"
+    },
+    {
+        "name": "detail_udp_ipv6",
+        "command": "ss -s | sed -n '7P' | awk '{print $4}'"
+    },
+    {
+        "name": "detail_tcp_total",
+        "command": "ss -s | sed -n '8P' | awk '{print $2}'"
+    },
+    {
+        "name": "detail_tcp_ip",
+        "command": "ss -s | sed -n '8P' | awk '{print $3}'"
+    },
+    {
+        "name": "detail_tcp_ipv6",
+        "command": "ss -s | sed -n '8P' | awk '{print $4}'"
+    },
+    {
+        "name": "detail_inet_total",
+        "command": "ss -s | sed -n '9P' | awk '{print $2}'"
+    },
+    {
+        "name": "detail_inet_ip",
+        "command": "ss -s | sed -n '9P' | awk '{print $3}'"
+    },
+    {
+        "name": "detail_inet_ipv6",
+        "command": "ss -s | sed -n '9P' | awk '{print $4}'"
+    }
+]
+

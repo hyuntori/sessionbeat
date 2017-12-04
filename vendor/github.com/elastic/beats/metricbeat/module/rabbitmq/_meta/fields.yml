@@ -1,0 +1,10 @@
+- key: rabbitmq
+  title: "RabbitMQ"
+  description: >
+    RabbitMQ module
+  release: beta
+  fields:
+    - name: rabbitmq
+      type: group
+      description: >
+      fields:

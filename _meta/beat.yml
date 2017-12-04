@@ -1,0 +1,7 @@
+################### Sessionbeat Configuration Example #########################
+
+############################# Sessionbeat ######################################
+
+sessionbeat:
+  # Defines how often an event is sent to the output
+  period: 1s

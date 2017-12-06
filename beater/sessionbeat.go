@@ -93,7 +93,7 @@ func (bt *Sessionbeat) Run(b *beat.Beat) error {
 		event := beat.Event{
 			Timestamp: time.Now(),
 			Fields: common.MapStr{
-				"type":    b.Info.Name,
+				"type":"session",
 				"sum":common.MapStr{
  					"total":commandMap["sum_total"],
 					"tcp_total":commandMap["sum_tcp_total"],

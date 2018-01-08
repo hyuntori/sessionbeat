@@ -3,12 +3,12 @@ package beater
 import (
 	"fmt"
 	"time"
-        "encoding/json"
-        "os/exec"
-        "os"
-        "io/ioutil"
-        "log"
-        "strings"
+    "encoding/json"
+    "os/exec"
+    "os"
+    "io/ioutil"
+    "log"
+    "strings"
 	"github.com/elastic/beats/libbeat/beat"
 	"github.com/elastic/beats/libbeat/common"
 	"github.com/elastic/beats/libbeat/logp"
@@ -67,8 +67,8 @@ func (bt *Sessionbeat) Run(b *beat.Beat) error {
 		return err
 	}
         
-         var commandMap map[string]string
-         commandMap = make(map[string]string)
+         var commandMap map[string]int
+         commandMap = make(map[string]int)
          docs := getDocs()
          for _, s := range docs {
            cmd := s.Command
@@ -76,7 +76,7 @@ func (bt *Sessionbeat) Run(b *beat.Beat) error {
            if err != nil {
              log.Fatal(err)
          }
-           commandMap[s.Name] = strings.TrimSuffix(string(out),"\n")
+           commandMap[s.Name] = strings.TrimSuffix(strconv.ParseInt(out,0,64),"\n")
          }
 
         fmt.Println(commandMap)
@@ -95,35 +95,35 @@ func (bt *Sessionbeat) Run(b *beat.Beat) error {
 			Fields: common.MapStr{
 				"type":"session",
 				"sum":common.MapStr{
- 					"total":commandMap["sum_total"],
-					"tcp_total":commandMap["sum_tcp_total"],
-					"tcp_extab":commandMap["sum_tcp_extab"],
-					"tcp_closed":commandMap["sum_tcp_closed"],
-					"tcp_orphaned":commandMap["sum_tcp_orphaned"],
-					"tcp_synrecv":commandMap["sum_tcp_synrecv"],
-					"tcp_timewait":commandMap["sum_tcp_timewait"],
+ 					"total": int64(commandMap["sum_total"]),
+					"tcp_total": int64(commandMap["sum_tcp_total"]),
+					"tcp_extab": int64(commandMap["sum_tcp_extab"]),
+					"tcp_closed": int64(commandMap["sum_tcp_closed"]),
+					"tcp_orphaned": int64(commandMap["sum_tcp_orphaned"]),
+					"tcp_synrecv": int64(commandMap["sum_tcp_synrecv"]),
+					"tcp_timewait": int64(commandMap["sum_tcp_timewait"]),
 				},
 				"detail":common.MapStr{
 					"raw":common.MapStr{
-						"total":commandMap["detail_raw_total"],
- 						"ip":commandMap["detail_raw_ip"],
-						"ipv6":commandMap["detail_raw_ipv6"],
+						"total":int64(commandMap["detail_raw_total"]),
+ 						"ip":int64(commandMap["detail_raw_ip"]),
+						"ipv6":int64(commandMap["detail_raw_ipv6"]),
 					},
 					"udp":common.MapStr{
-                                                "total":commandMap["detail_udp_total"],
-                                                "ip":commandMap["detail_udp_ip"],
-                                                "ipv6":commandMap["detail_udp_ipv6"],
+                                                "total":int64(commandMap["detail_udp_total"]),
+                                                "ip":int64(commandMap["detail_udp_ip"]),
+                                                "ipv6":int64(commandMap["detail_udp_ipv6"]),
 
                                         },
 					"tcp":common.MapStr{
-                                                 "total":commandMap["detail_tcp_total"],
-                                                 "ip":commandMap["detail_tcp_ip"],
-                                                 "ipv6":commandMap["detail_tcp_ipv6"],
+                                                 "total":int64(commandMap["detail_tcp_total"]),
+                                                 "ip":int64(commandMap["detail_tcp_ip"]),
+                                                 "ipv6":int64(commandMap["detail_tcp_ipv6"]),
                                          },
 					"inet":common.MapStr{
-   						"total":commandMap["detail_inet_total"],
-         					"ip":commandMap["detail_inet_ip"],
-         					"ipv6":commandMap["detail_inet_ipv6"],
+   						"total":int64(commandMap["detail_inet_total"]),
+         					"ip":int64(commandMap["detail_inet_ip"]),
+         					"ipv6":int64(commandMap["detail_inet_ipv6"]),
  					},
 				},
 			},

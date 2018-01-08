@@ -650,7 +650,7 @@ output.elasticsearch:
 
 # Template name. By default the template name is "sessionbeat-%{[beat.version]}"
 # The template name and pattern has to be set in case the elasticsearch index pattern is modified.
-#setup.template.name: "sessionbeat-%{[beat.version]}"
+setup.template.name: "sessionbeat-*"
 
 # Template pattern. By default the template pattern is "-%{[beat.version]}-*" to apply to the default index settings.
 # The first part is the version of the beat and then -* is used to match all daily indices.

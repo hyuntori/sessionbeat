@@ -1,24 +1,291 @@
-2017-12-04T15:10:01+09:00 INFO Home path: [/home/hduser/projects/src/src/github.com/hyuntori/sessionbeat] Config path: [/home/hduser/projects/src/src/github.com/hyuntori/sessionbeat] Data path: [/home/hduser/projects/src/src/github.com/hyuntori/sessionbeat/data] Logs path: [/home/hduser/projects/src/src/github.com/hyuntori/sessionbeat/logs]
-2017-12-04T15:10:01+09:00 INFO Metrics logging every 30s
-2017-12-04T15:10:01+09:00 INFO Beat UUID: a0ac18e5-2879-4cdb-9ae7-383fc8254eb8
-2017-12-04T15:10:01+09:00 INFO Setup Beat: sessionbeat; Version: 7.0.0-alpha1
-2017-12-04T15:10:01+09:00 INFO Elasticsearch url: http://localhost:9200
-2017-12-04T15:10:01+09:00 INFO Beat name: direa-server02
-2017-12-04T15:10:01+09:00 INFO sessionbeat start running.
-2017-12-04T15:10:01+09:00 INFO sessionbeat is running! Hit CTRL-C to stop it.
-2017-12-04T15:10:02+09:00 INFO Event sent
-2017-12-04T15:10:03+09:00 INFO Event sent
-2017-12-04T15:10:04+09:00 INFO Event sent
-2017-12-04T15:10:04+09:00 ERR  Failed to connect: Get http://localhost:9200: dial tcp 127.0.0.1:9200: getsockopt: connection refused
-2017-12-04T15:10:05+09:00 INFO Event sent
-2017-12-04T15:10:06+09:00 INFO Event sent
-2017-12-04T15:10:06+09:00 ERR  Failed to connect: Get http://localhost:9200: dial tcp 127.0.0.1:9200: getsockopt: connection refused
-2017-12-04T15:10:07+09:00 INFO Event sent
-2017-12-04T15:10:08+09:00 INFO Event sent
-2017-12-04T15:10:09+09:00 INFO Event sent
-2017-12-04T15:10:10+09:00 INFO Event sent
-2017-12-04T15:10:10+09:00 ERR  Failed to connect: Get http://localhost:9200: dial tcp [::1]:9200: getsockopt: connection refused
-2017-12-04T15:10:11+09:00 INFO Event sent
-2017-12-04T15:10:12+09:00 INFO Total non-zero values:  beat.info.uptime.ms=10463 beat.memstats.gc_next=4194304 beat.memstats.memory_alloc=2680400 beat.memstats.memory_total=4580544 libbeat.config.module.running=0 libbeat.output.type=elasticsearch libbeat.pipeline.clients=0 libbeat.pipeline.events.active=10 libbeat.pipeline.events.published=10 libbeat.pipeline.events.retry=4 libbeat.pipeline.events.total=10
-2017-12-04T15:10:12+09:00 INFO Uptime: 10.463371772s
-2017-12-04T15:10:12+09:00 INFO sessionbeat stopped.
+2018-01-08T14:52:02+09:00 DBG  [log] Disable stderr logging
+2018-01-08T14:52:02+09:00 INFO Home path: [/home/hduser/projects/src/src/github.com/hyuntori/sessionbeat] Config path: [/home/hduser/projects/src/src/github.com/hyuntori/sessionbeat] Data path: [/home/hduser/projects/src/src/github.com/hyuntori/sessionbeat/data] Logs path: [/home/hduser/projects/src/src/github.com/hyuntori/sessionbeat/logs]
+2018-01-08T14:52:02+09:00 DBG  [beat] Beat metadata path: /home/hduser/projects/src/src/github.com/hyuntori/sessionbeat/data/meta.json
+2018-01-08T14:52:02+09:00 INFO Metrics logging every 30s
+2018-01-08T14:52:02+09:00 INFO Beat UUID: a0ac18e5-2879-4cdb-9ae7-383fc8254eb8
+2018-01-08T14:52:02+09:00 INFO Setup Beat: sessionbeat; Version: 7.0.0-alpha1
+2018-01-08T14:52:02+09:00 DBG  [beat] Initializing output plugins
+2018-01-08T14:52:02+09:00 DBG  [processors] Processors: 
+2018-01-08T14:52:02+09:00 INFO Elasticsearch url: http://localhost:9222
+2018-01-08T14:52:02+09:00 DBG  [publish] start pipeline event consumer
+2018-01-08T14:52:02+09:00 INFO Beat name: direa-server01
+2018-01-08T14:52:02+09:00 INFO sessionbeat start running.
+2018-01-08T14:52:02+09:00 INFO sessionbeat is running! Hit CTRL-C to stop it.
+2018-01-08T14:52:12+09:00 DBG  [publish] Publish event: {
+  "@timestamp": "2018-01-08T05:52:12.579Z",
+  "@metadata": {
+    "beat": "sessionbeat",
+    "type": "doc",
+    "version": "7.0.0-alpha1"
+  },
+  "detail": {
+    "tcp": {
+      "ipv6": "7346",
+      "total": "7407",
+      "ip": "61"
+    },
+    "inet": {
+      "total": "7415",
+      "ip": "64",
+      "ipv6": "7351"
+    },
+    "raw": {
+      "total": "0",
+      "ip": "0",
+      "ipv6": "0"
+    },
+    "udp": {
+      "total": "8",
+      "ip": "3",
+      "ipv6": "5"
+    }
+  },
+  "type": "session",
+  "sum": {
+    "total": "10634",
+    "tcp_total": "10162",
+    "tcp_extab": "499",
+    "tcp_closed": "2755",
+    "tcp_orphaned": "0",
+    "tcp_synrecv": "0",
+    "tcp_timewait": "294"
+  },
+  "beat": {
+    "name": "direa-server01",
+    "hostname": "direa-server01",
+    "version": "7.0.0-alpha1"
+  }
+}
+2018-01-08T14:52:12+09:00 INFO Event sent
+2018-01-08T14:52:13+09:00 DBG  [elasticsearch] ES Ping(url=http://localhost:9222)
+2018-01-08T14:52:13+09:00 DBG  [elasticsearch] Ping status code: 200
+2018-01-08T14:52:13+09:00 INFO Connected to Elasticsearch version 6.0.0
+2018-01-08T14:52:13+09:00 DBG  [elasticsearch] HEAD http://localhost:9222/_template/sessionbeat-7.0.0-alpha1  <nil>
+2018-01-08T14:52:13+09:00 INFO Template already exists and will not be overwritten.
+2018-01-08T14:52:13+09:00 DBG  [elasticsearch] PublishEvents: 1 events have been  published to elasticsearch in 19.953365ms.
+2018-01-08T14:52:13+09:00 WARN Can not index event (status=400): {"type":"illegal_argument_exception","reason":"Rejecting mapping update to [sessionbeat-7.0.0-alpha1-2018.01.08] as the final mapping would have more than 1 type: [session, doc]"}
+2018-01-08T14:52:13+09:00 DBG  [memqueue] ackloop: receive ack [0: 0, 1]
+2018-01-08T14:52:13+09:00 DBG  [memqueue] broker ACK events: count=1, start-seq=1, end-seq=1
+
+2018-01-08T14:52:13+09:00 DBG  [memqueue] ackloop: return ack to broker loop:1
+2018-01-08T14:52:13+09:00 DBG  [memqueue] ackloop:  done send ack
+2018-01-08T14:52:22+09:00 DBG  [publish] Publish event: {
+  "@timestamp": "2018-01-08T05:52:22.579Z",
+  "@metadata": {
+    "beat": "sessionbeat",
+    "type": "doc",
+    "version": "7.0.0-alpha1"
+  },
+  "beat": {
+    "hostname": "direa-server01",
+    "version": "7.0.0-alpha1",
+    "name": "direa-server01"
+  },
+  "type": "session",
+  "sum": {
+    "tcp_closed": "2755",
+    "tcp_orphaned": "0",
+    "tcp_synrecv": "0",
+    "tcp_timewait": "294",
+    "total": "10634",
+    "tcp_total": "10162",
+    "tcp_extab": "499"
+  },
+  "detail": {
+    "inet": {
+      "total": "7415",
+      "ip": "64",
+      "ipv6": "7351"
+    },
+    "raw": {
+      "total": "0",
+      "ip": "0",
+      "ipv6": "0"
+    },
+    "udp": {
+      "total": "8",
+      "ip": "3",
+      "ipv6": "5"
+    },
+    "tcp": {
+      "total": "7407",
+      "ip": "61",
+      "ipv6": "7346"
+    }
+  }
+}
+2018-01-08T14:52:22+09:00 INFO Event sent
+2018-01-08T14:52:23+09:00 DBG  [elasticsearch] PublishEvents: 1 events have been  published to elasticsearch in 11.219068ms.
+2018-01-08T14:52:23+09:00 WARN Can not index event (status=400): {"type":"illegal_argument_exception","reason":"Rejecting mapping update to [sessionbeat-7.0.0-alpha1-2018.01.08] as the final mapping would have more than 1 type: [session, doc]"}
+2018-01-08T14:52:23+09:00 DBG  [memqueue] ackloop: receive ack [1: 0, 1]
+2018-01-08T14:52:23+09:00 DBG  [memqueue] broker ACK events: count=1, start-seq=2, end-seq=2
+
+2018-01-08T14:52:23+09:00 DBG  [memqueue] ackloop: return ack to broker loop:1
+2018-01-08T14:52:23+09:00 DBG  [memqueue] ackloop:  done send ack
+2018-01-08T14:52:32+09:00 INFO Non-zero metrics in the last 30s: beat.info.uptime.ms=30013 beat.memstats.gc_next=4194304 beat.memstats.memory_alloc=3136000 beat.memstats.memory_total=5036512 libbeat.config.module.running=0 libbeat.output.read.bytes=1196 libbeat.output.type=elasticsearch libbeat.output.write.bytes=1732 libbeat.pipeline.clients=1 libbeat.pipeline.events.active=0 libbeat.pipeline.events.published=2 libbeat.pipeline.events.retry=1 libbeat.pipeline.events.total=2 libbeat.pipeline.queue.acked=2
+2018-01-08T14:52:32+09:00 DBG  [publish] Publish event: {
+  "@timestamp": "2018-01-08T05:52:32.579Z",
+  "@metadata": {
+    "beat": "sessionbeat",
+    "type": "doc",
+    "version": "7.0.0-alpha1"
+  },
+  "type": "session",
+  "sum": {
+    "tcp_orphaned": "0",
+    "tcp_synrecv": "0",
+    "tcp_timewait": "294",
+    "total": "10634",
+    "tcp_total": "10162",
+    "tcp_extab": "499",
+    "tcp_closed": "2755"
+  },
+  "detail": {
+    "raw": {
+      "total": "0",
+      "ip": "0",
+      "ipv6": "0"
+    },
+    "udp": {
+      "ipv6": "5",
+      "total": "8",
+      "ip": "3"
+    },
+    "tcp": {
+      "ipv6": "7346",
+      "total": "7407",
+      "ip": "61"
+    },
+    "inet": {
+      "ipv6": "7351",
+      "total": "7415",
+      "ip": "64"
+    }
+  },
+  "beat": {
+    "name": "direa-server01",
+    "hostname": "direa-server01",
+    "version": "7.0.0-alpha1"
+  }
+}
+2018-01-08T14:52:32+09:00 INFO Event sent
+2018-01-08T14:52:33+09:00 DBG  [elasticsearch] PublishEvents: 1 events have been  published to elasticsearch in 9.67346ms.
+2018-01-08T14:52:33+09:00 WARN Can not index event (status=400): {"type":"illegal_argument_exception","reason":"Rejecting mapping update to [sessionbeat-7.0.0-alpha1-2018.01.08] as the final mapping would have more than 1 type: [session, doc]"}
+2018-01-08T14:52:33+09:00 DBG  [memqueue] ackloop: receive ack [2: 0, 1]
+2018-01-08T14:52:33+09:00 DBG  [memqueue] broker ACK events: count=1, start-seq=3, end-seq=3
+
+2018-01-08T14:52:33+09:00 DBG  [memqueue] ackloop: return ack to broker loop:1
+2018-01-08T14:52:33+09:00 DBG  [memqueue] ackloop:  done send ack
+2018-01-08T14:52:42+09:00 DBG  [publish] Publish event: {
+  "@timestamp": "2018-01-08T05:52:42.579Z",
+  "@metadata": {
+    "beat": "sessionbeat",
+    "type": "doc",
+    "version": "7.0.0-alpha1"
+  },
+  "detail": {
+    "raw": {
+      "total": "0",
+      "ip": "0",
+      "ipv6": "0"
+    },
+    "udp": {
+      "total": "8",
+      "ip": "3",
+      "ipv6": "5"
+    },
+    "tcp": {
+      "ip": "61",
+      "ipv6": "7346",
+      "total": "7407"
+    },
+    "inet": {
+      "total": "7415",
+      "ip": "64",
+      "ipv6": "7351"
+    }
+  },
+  "beat": {
+    "hostname": "direa-server01",
+    "version": "7.0.0-alpha1",
+    "name": "direa-server01"
+  },
+  "type": "session",
+  "sum": {
+    "tcp_total": "10162",
+    "tcp_extab": "499",
+    "tcp_closed": "2755",
+    "tcp_orphaned": "0",
+    "tcp_synrecv": "0",
+    "tcp_timewait": "294",
+    "total": "10634"
+  }
+}
+2018-01-08T14:52:42+09:00 INFO Event sent
+2018-01-08T14:52:43+09:00 DBG  [elasticsearch] PublishEvents: 1 events have been  published to elasticsearch in 15.081833ms.
+2018-01-08T14:52:43+09:00 WARN Can not index event (status=400): {"type":"illegal_argument_exception","reason":"Rejecting mapping update to [sessionbeat-7.0.0-alpha1-2018.01.08] as the final mapping would have more than 1 type: [session, doc]"}
+2018-01-08T14:52:43+09:00 DBG  [memqueue] ackloop: receive ack [3: 0, 1]
+2018-01-08T14:52:43+09:00 DBG  [memqueue] broker ACK events: count=1, start-seq=4, end-seq=4
+
+2018-01-08T14:52:43+09:00 DBG  [memqueue] ackloop: return ack to broker loop:1
+2018-01-08T14:52:43+09:00 DBG  [memqueue] ackloop:  done send ack
+2018-01-08T14:52:52+09:00 DBG  [publish] Publish event: {
+  "@timestamp": "2018-01-08T05:52:52.579Z",
+  "@metadata": {
+    "beat": "sessionbeat",
+    "type": "doc",
+    "version": "7.0.0-alpha1"
+  },
+  "type": "session",
+  "sum": {
+    "tcp_extab": "499",
+    "tcp_closed": "2755",
+    "tcp_orphaned": "0",
+    "tcp_synrecv": "0",
+    "tcp_timewait": "294",
+    "total": "10634",
+    "tcp_total": "10162"
+  },
+  "detail": {
+    "udp": {
+      "ip": "3",
+      "ipv6": "5",
+      "total": "8"
+    },
+    "tcp": {
+      "total": "7407",
+      "ip": "61",
+      "ipv6": "7346"
+    },
+    "inet": {
+      "ip": "64",
+      "ipv6": "7351",
+      "total": "7415"
+    },
+    "raw": {
+      "total": "0",
+      "ip": "0",
+      "ipv6": "0"
+    }
+  },
+  "beat": {
+    "hostname": "direa-server01",
+    "version": "7.0.0-alpha1",
+    "name": "direa-server01"
+  }
+}
+2018-01-08T14:52:52+09:00 INFO Event sent
+2018-01-08T14:52:53+09:00 DBG  [elasticsearch] PublishEvents: 1 events have been  published to elasticsearch in 19.565945ms.
+2018-01-08T14:52:53+09:00 WARN Can not index event (status=400): {"type":"illegal_argument_exception","reason":"Rejecting mapping update to [sessionbeat-7.0.0-alpha1-2018.01.08] as the final mapping would have more than 1 type: [session, doc]"}
+2018-01-08T14:52:53+09:00 DBG  [memqueue] ackloop: receive ack [4: 0, 1]
+2018-01-08T14:52:53+09:00 DBG  [memqueue] broker ACK events: count=1, start-seq=5, end-seq=5
+
+2018-01-08T14:52:53+09:00 DBG  [memqueue] ackloop: return ack to broker loop:1
+2018-01-08T14:52:53+09:00 DBG  [memqueue] ackloop:  done send ack
+2018-01-08T14:52:58+09:00 DBG  [service] Received sigterm/sigint, stopping
+2018-01-08T14:52:58+09:00 DBG  [publish] client: closing acker
+2018-01-08T14:52:58+09:00 DBG  [publish] client: done closing acker
+2018-01-08T14:52:58+09:00 DBG  [publish] client: cancelled 0 events
+2018-01-08T14:52:58+09:00 INFO Total non-zero values:  beat.info.uptime.ms=56039 beat.memstats.gc_next=4194304 beat.memstats.memory_alloc=1777624 beat.memstats.memory_total=5794096 libbeat.config.module.running=0 libbeat.output.read.bytes=2280 libbeat.output.type=elasticsearch libbeat.output.write.bytes=3949 libbeat.pipeline.clients=0 libbeat.pipeline.events.active=0 libbeat.pipeline.events.published=5 libbeat.pipeline.events.retry=1 libbeat.pipeline.events.total=5 libbeat.pipeline.queue.acked=5
+2018-01-08T14:52:58+09:00 INFO Uptime: 56.039089881s
+2018-01-08T14:52:58+09:00 INFO sessionbeat stopped.
